@@ -27,7 +27,7 @@ namespace PocMvcAPP.Data
         //Tell EF to create the tables
         //I need to make Category public so I can use in the new area ADMIN
         public DbSet<Category>? Category { get; set; }
-        DbSet<CategoryItem>? CategoryItem { get; set; }
+        public DbSet<CategoryItem>? CategoryItem { get; set; }
         DbSet<Content>? Content { get; set; }
         DbSet<MediaType>? MediaType { get; set; }
         DbSet<UserCategory>? UserCategory { get; set; }
