@@ -36,9 +36,6 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-//app.MapControllerRoute(
-//    name: "default",
-//    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapControllerRoute(
         name: "Admin",
         pattern: "{area:exists}/{controller=Category}/{action=Index}/{id?}"
@@ -50,20 +47,6 @@ app.MapControllerRoute(
     defaults: new { controller = "Home" } // Set the default controller to "Home"
 );
 
-
-
 app.MapRazorPages();
 
 app.Run();
-
-//app.UseEndpoints(endpoints =>
-//{
-//    endpoints.MapControllerRoute(
-//    name: "default",
-//    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-//    endpoints.MapControllerRoute(
-//      name: "Admin",
-//      pattern: "{area:exists}/{controller=Category}/{action=Index}/{id?}"
-//    );
-//});
